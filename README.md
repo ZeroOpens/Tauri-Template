@@ -1,6 +1,6 @@
 # Tauri2.0 模版项目
 
-<p align="center"><a href="https://tauri.app/start/"><img width="100" src="./src/static/images/Markdown/logo.png" alt="logo"></a></p>
+<p align="center"><a href="https://tauri.app/start/"><img width="100" src="./MKImages/logo.png" alt="logo"></a></p>
 
 <h3 align="center">使用 Vue3 + Ts 的 Tauri2.0 模版</h3>
 <br>
@@ -21,22 +21,22 @@
 
 ---
 
-### <img width="20" src="./src/static/images/Markdown/项目介绍.png" style="vertical-align: middle;" alt="项目介绍"> 项目介绍
+### <img width="20" src="./MKImages/项目介绍.png" style="vertical-align: middle;" alt="项目介绍"> 项目介绍
 
 本项目为 Tauri2.0 模版项目，拉取后直接可以编写，无需配置。
 
-### <img width="19" src="./src/static/images/Markdown/添加功能.png" style="vertical-align: middle;" alt="模版已添加功能"> 模版已添加功能
+### <img width="19" src="./MKImages/添加功能.png" style="vertical-align: middle;" alt="模版已添加功能"> 模版已添加功能
 
 1、更新插件，修改私钥和请求地址即可<br>
 
-### <img width="19" src="./src/static/images/Markdown/插件.png" style="vertical-align: middle;" alt="需要安装的插件"> 需要安装的插件
+### <img width="19" src="./MKImages/插件.png" style="vertical-align: middle;" alt="需要安装的插件"> 需要安装的插件
 
-1. <img width="50" src="./src/static/images/Markdown/Vue - Official.png" alt="Vue - Official"> Vue - Official
+1. <img width="50" src="./MKImages/Vue - Official.png" alt="Vue - Official"> Vue - Official
 
-2. <img width="50" src="./src/static/images/Markdown/logo.png" alt="Tauri"> Tauri
+2. <img width="50" src="./MKImages/logo.png" alt="Tauri"> Tauri
 
 
-### <img width="20" src="./src/static/images/Markdown/使用教程.png" style="vertical-align: middle;" alt="使用教程"> 使用教程
+### <img width="20" src="./MKImages/使用教程.png" style="vertical-align: middle;" alt="使用教程"> 使用教程
 
 <a href="https://tauri.app/start/prerequisites/">点击查看前置条件</a>
 
@@ -70,18 +70,19 @@ pnpm tauri dev
 pnpm tauri build
 ```
 
-### <img width="20" src="./src/static/images/Markdown/QQ.png" style="vertical-align: middle;" alt="QQ交流群"> QQ 交流群
+### <img width="20" src="./MKImages/QQ.png" style="vertical-align: middle;" alt="QQ交流群"> QQ 交流群
 
 QQ 群号：863411527
 <br>
 扫码添加:
 <br>
-<img width="150" src="./src/static/images/Markdown/QQ交流群.png" alt="QQ">
+<img width="150" src="./MKImages/QQ交流群.png" alt="QQ">
 
-### <img width="20" src="./src/static/images/Markdown/工程结构解析.png" style="vertical-align: middle;" alt="工程主要结构解析"> 工程主要结构解析
+### <img width="20" src="./MKImages/工程结构解析.png" style="vertical-align: middle;" alt="工程主要结构解析"> 工程主要结构解析
 
 ```
-┌── Server                     # 服务器代码
+┌── MKImages                   # Markdown图片
+├── Server                     # 服务器代码
 │   └── update                 # 更新功能代码
 ├── src                        # 前端源代码
 │   ├── components             # 全局组件
@@ -114,7 +115,7 @@ QQ 群号：863411527
 └── vite.config.ts             # vite 配置
 ```
 
-### <img width="20" src="./src/static/images/Markdown/版本更新.png" style="vertical-align: middle;" alt="版本更新内容"> 版本更新内容
+### <img width="20" src="./MKImages/版本更新.png" style="vertical-align: middle;" alt="版本更新内容"> 版本更新内容
 
 #### v1.1.0 (2025-05-06)
 
