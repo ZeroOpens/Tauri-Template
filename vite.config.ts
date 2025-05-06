@@ -33,5 +33,18 @@ export default defineConfig(async () => ({
       // 3. tell vite to ignore watching `src-tauri`
       ignored: ["**/src-tauri/**"],
     },
+    // 虚拟代理，解决跨域问题（建议在后端解决跨域问题）
+    proxy: {
+      '/api-ziyi': {
+        target: 'http://api.ziyi.site',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api-ziyi/, '')
+      },
+      // '/api-youName': {
+      //   target: '基地址',
+      //   changeOrigin: true,
+      //   rewrite: (path) => path.replace(/^\/api-youName/, '')
+      // }
+    }
   },
 }));

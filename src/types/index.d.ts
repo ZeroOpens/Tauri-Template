@@ -1,10 +1,13 @@
-//定义一个接口，用于限制对象的具体属性
-export interface userType {
-  id: string,
-  userName: string,
-  password: number
+/**
+ * 随机狗狗图片API返回值类型
+ * @message string
+ * @status string
+ */
+export interface DogResponse {
+  message: string,
+  status: string
 }
 
 // 自定义类型
-export type usersType = user[]
+// export type Dogs = DogResponse[]
 

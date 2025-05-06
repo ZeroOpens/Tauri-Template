@@ -86,19 +86,21 @@ QQ 群号：863411527
 │   └── update                 # 更新功能代码
 ├── src                        # 前端源代码
 │   ├── components             # 全局组件
-│   ├── hooks                  # 组合式函数
+│       └── update.vue         # 更新组件
+│   ├── hooks                  # 组合式函数  
+│       └── useTauri.ts        # 获取 Tauri 信息
 │   ├── pages                  # 主包页面
-│       └── index              # 首页
+│       └── index.vue          # 首页
 │   ├── router                 # 路由配置
 │   ├── services               # 所有请求
+│       └── index.ts           # 请求示例
 │   ├── static                 # 本地静态资源
 │       └── images             # 图片
 │   ├── stores                 # 全局 pinia store
-│       ├── modules            # 模块
-│       └── index.ts           # store 入口
 │   ├── types                  # 类型声明文件
 │       └── index.d.ts         # 全局组件类型声明
 │   ├── utils                  # 全局方法
+│       └── http.ts            # axios 拦截器
 │   ├── App.vue                # 入口页面
 │   └── main.ts                # Vue初始化入口文件
 ├── src-tauri                  # Rust 后端源代码
@@ -116,6 +118,12 @@ QQ 群号：863411527
 ```
 
 ### <img width="20" src="./MKImages/版本更新.png" style="vertical-align: middle;" alt="版本更新内容"> 版本更新内容
+
+#### v1.1.1 (2025-05-06)
+
+1.  添加axios和拦截器。
+2.  添加跨域问题解决方法。
+3.  添加更多示例。
 
 #### v1.1.0 (2025-05-06)
 
