@@ -27,7 +27,10 @@
 
 ### <img width="19" src="./src/static/Images/MKImages/添加功能.png" style="vertical-align: middle;" alt="模版已添加功能"> 模版已添加功能
 
-1、更新插件，修改私钥和请求地址即可<br>
+1、添加axios，已配置拦截器<br>
+2、添加router，已配置示例<br>
+3、添加pinia，已配置持久化<br>
+4、更新插件，修改私钥和请求地址即可<br>
 
 ### <img width="19" src="./src/static/Images/MKImages/插件.png" style="vertical-align: middle;" alt="需要安装的插件"> 需要安装的插件
 
@@ -81,8 +84,7 @@ QQ 群号：863411527
 ### <img width="20" src="./src/static/Images/MKImages/工程结构解析.png" style="vertical-align: middle;" alt="工程主要结构解析"> 工程主要结构解析
 
 ```
-┌── MKImages                   # Markdown图片
-├── Server                     # 服务器代码
+┌── Server                     # 服务器代码
 │   └── update                 # 更新功能代码
 ├── src                        # 前端源代码
 │   ├── components             # 全局组件
@@ -91,12 +93,15 @@ QQ 群号：863411527
 │       └── useTauri.ts        # 获取 Tauri 信息
 │   ├── pages                  # 主包页面
 │       └── index.vue          # 首页
-│   ├── router                 # 路由配置
+│   ├── router                 # 路由
+│       └──index.ts            # 路由配置
 │   ├── services               # 所有请求
 │       └── index.ts           # 请求示例
 │   ├── static                 # 本地静态资源
 │       └── images             # 图片
-│   ├── stores                 # 全局 pinia store
+│   ├── stores                 # 全局 pinia
+│       ├── modules            # pinia 仓库
+│       └── index.ts           # 全局 pinia 配置
 │   ├── types                  # 类型声明文件
 │       └── index.d.ts         # 全局组件类型声明
 │   ├── utils                  # 全局方法
@@ -118,6 +123,13 @@ QQ 群号：863411527
 ```
 
 ### <img width="20" src="./src/static/Images/MKImages/版本更新.png" style="vertical-align: middle;" alt="版本更新内容"> 版本更新内容
+
+#### v1.2.1 (2025-05-10)
+
+1.  添加router。
+2.  添加pinia、持久化插件。
+3.  添加更多的思路。
+4.  添加更多示例。
 
 #### v1.1.1 (2025-05-06)
 

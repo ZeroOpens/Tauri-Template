@@ -74,7 +74,7 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .update-container {
   .update-section {
   display: flex;

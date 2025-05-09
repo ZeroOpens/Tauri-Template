@@ -1,60 +1,96 @@
 <template>
-  <div class="index-container">
-    <h1>Hello Tauri2.0</h1>
-    <p>tauri版本：{{ tauriVersion }}</p>
-    <p>应用程序名称：{{ appName }}</p>
-    <p>应用程序版本：{{ appVersion }}</p>
-    <Update/>
-    <button @click="getDogImages">获取图片</button>
-    <button @click="getWord">获取语句</button>
-    <br>
-    <p>{{ word }}</p>
-    <img :src="dogImage">
+    <div class="index">
+    <!-- 头部 -->
+    <div class="index-header">
+      <h1>Hello Tauri 2.0</h1>
+    </div>
+    <!-- logo -->
+    <div class="hello" v-if="show">
+      <img src="@/static/Images/logo.png" alt="">
+      <button @click="setShow">进入学习</button>
+    </div>
+    <!-- 内容 -->
+    <div class="content" v-else>
+      <!-- 导航 -->
+      <div class="index-nav">
+        <RouterLink :to="{name: 'home'}" class="navLink" active-class="navLink-active">首页</RouterLink>
+        <RouterLink :to="{name: 'pinia'}" class="navLink" active-class="navLink-active">pinia</RouterLink>
+        <RouterLink :to="{name: 'request'}" class="navLink" active-class="navLink-active">请求</RouterLink>
+        <RouterLink :to="{name: 'function'}" class="navLink" active-class="navLink-active">功能</RouterLink>
+      </div>
+      <!-- 展示区 -->
+      <div class="index-content">
+        <RouterView />
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
   defineOptions({name: 'Index'})
-  import {ref} from 'vue'
-  import useTauri from '@/hooks/useTauri'
-  import Update from '@/components/update.vue'
-  import { getDogAPI, getWordAPI } from '@/services/index'
+  import { RouterLink, RouterView } from 'vue-router'
+  import { ref } from 'vue'
 
-  // 随机获取狗狗图片
-  let dogImage = ref()
-  const getDogImages = async () => {
-    const response = await getDogAPI()
-    dogImage.value = response.message
-    console.log(response);
-  };
+  let show = ref(true)
 
-  // 随机获取一句话
-  let word = ref()
-  const getWord = async () => {
-    const response = await getWordAPI()
-    word.value = response
-    console.log(response);
-  };
-
-
-  const {tauriVersion, appName, appVersion} = useTauri()
-
+  const setShow = () => {
+    show.value = !show
+  }
 </script>
 
-<style scoped>
-.index-container {
-  padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
+<style scoped lang="scss">
+.index {
   h1 {
     text-align: center;
   }
-  p {
-  font-size: 20px;
+
+  .hello {
+    img {
+      display: block;
+      width: 300px;
+      margin: 0 auto;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      border-radius: 6px;
+      background-color: #FFC131;
+      color: rgb(0, 0, 0);
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: 0.2s linear; 
+      // 悬浮状态样式
+      &:hover {
+        color: white;
+        background-color: #24C8DB; 
+        box-shadow: 10px -10px 10px #FFC131; 
+      }
+    }
   }
-  img{
-    height: 200px;
+
+  // 导航样式
+  .index-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12%;
+    .navLink {
+      text-decoration: none;
+      padding: 8px 25px;
+      border-radius: 15px;
+      color: rgb(0, 0, 0);
+      background: rgba(255, 255, 255);
+      border: 3px solid #3d3f40;
+    }
+    .navLink-active {
+      color: rgb(255, 255, 255);
+      border: 3px solid #8f9393;
+      background-color: #3d3f40;
+    }
   }
 }
+
 </style>
  

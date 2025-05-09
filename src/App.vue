@@ -7,9 +7,9 @@
   import Index from '@/pages/index.vue'
 
   // 禁用鼠标右键
-  window.addEventListener('contextmenu', (e) => {
-    e.preventDefault();
-  });
+  // window.addEventListener('contextmenu', (e) => {
+  //   e.preventDefault();
+  // });
 
 
 </script>
