@@ -1,6 +1,6 @@
 # Tauri2.0 模版项目
 
-<p align="center"><a href="https://tauri.app/start/"><img width="100" src="./src/static/Images/MKImages/logo.png" alt="logo"></a></p>
+<p align="center"><a href="https://tauri.app/start/"><img width="100" src="./src/assets/Images/MKImages/logo.png" alt="logo"></a></p>
 
 <h3 align="center">使用 Vue3 + Ts 的 Tauri2.0 模版</h3>
 <br>
@@ -21,25 +21,25 @@
 
 ---
 
-### <img width="20" src="./src/static/Images/MKImages/项目介绍.png" style="vertical-align: middle;" alt="项目介绍"> 项目介绍
+### <img width="20" src="./src/assets/Images/MKImages/项目介绍.png" style="vertical-align: middle;" alt="项目介绍"> 项目介绍
 
-本项目为 Tauri2.0 模版项目，拉取后直接可以编写，无需配置。
+本项目为 Tauri2.0 模版项目，拉取后直接可以编写，无需额外的配置。
 
-### <img width="19" src="./src/static/Images/MKImages/添加功能.png" style="vertical-align: middle;" alt="模版已添加功能"> 模版已添加功能
+### <img width="19" src="./src/assets/Images/MKImages/添加功能.png" style="vertical-align: middle;" alt="模版已添加功能"> 模版已添加功能
 
 1、添加axios，已配置拦截器<br>
 2、添加router，已配置示例<br>
 3、添加pinia，已配置持久化<br>
-4、更新插件，修改私钥和请求地址即可<br>
+4、添加更新插件，修改私钥和请求地址即可<br>
 
-### <img width="19" src="./src/static/Images/MKImages/插件.png" style="vertical-align: middle;" alt="需要安装的插件"> 需要安装的插件
+### <img width="19" src="./src/assets/Images/MKImages/插件.png" style="vertical-align: middle;" alt="需要安装的插件"> 需要安装的插件
 
-1. <img width="50" src="./src/static/Images/MKImages/Vue - Official.png" alt="Vue - Official"> Vue - Official
+1. <img width="50" src="./src/assets/Images/MKImages/Vue - Official.png" alt="Vue - Official"> Vue - Official
 
-2. <img width="50" src="./src/static/Images/MKImages/logo.png" alt="Tauri"> Tauri
+2. <img width="50" src="./src/assets/Images/MKImages/logo.png" alt="Tauri"> Tauri
 
 
-### <img width="20" src="./src/static/Images/MKImages/使用教程.png" style="vertical-align: middle;" alt="使用教程"> 使用教程
+### <img width="20" src="./src/assets/Images/MKImages/使用教程.png" style="vertical-align: middle;" alt="使用教程"> 使用教程
 
 <a href="https://tauri.app/start/prerequisites/">点击查看前置条件</a>
 
@@ -73,18 +73,19 @@ pnpm tauri dev
 pnpm tauri build
 ```
 
-### <img width="20" src="./src/static/Images/MKImages/QQ.png" style="vertical-align: middle;" alt="QQ交流群"> QQ 交流群
+### <img width="20" src="./src/assets/Images/MKImages/QQ.png" style="vertical-align: middle;" alt="QQ交流群"> QQ 交流群
 
 QQ 群号：863411527
 <br>
 扫码添加:
 <br>
-<img width="150" src="./src/static/Images/MKImages/QQ交流群.png" alt="QQ">
+<img width="150" src="./src/assets/Images/MKImages/QQ交流群.png" alt="QQ">
 
-### <img width="20" src="./src/static/Images/MKImages/工程结构解析.png" style="vertical-align: middle;" alt="工程主要结构解析"> 工程主要结构解析
+### <img width="20" src="./src/assets/Images/MKImages/工程结构解析.png" style="vertical-align: middle;" alt="工程主要结构解析"> 工程主要结构解析
 
 ```
-┌── Server                     # 服务器代码
+Tauri-Template
+├── Server                     # 服务器代码
 │   └── update                 # 更新功能代码
 ├── src                        # 前端源代码
 │   ├── components             # 全局组件
@@ -97,7 +98,7 @@ QQ 群号：863411527
 │       └──index.ts            # 路由配置
 │   ├── services               # 所有请求
 │       └── index.ts           # 请求示例
-│   ├── static                 # 本地静态资源
+│   ├── assets                 # 本地静态资源
 │       └── images             # 图片
 │   ├── stores                 # 全局 pinia
 │       ├── modules            # pinia 仓库
@@ -122,7 +123,7 @@ QQ 群号：863411527
 └── vite.config.ts             # vite 配置
 ```
 
-### <img width="20" src="./src/static/Images/MKImages/版本更新.png" style="vertical-align: middle;" alt="版本更新内容"> 版本更新内容
+### <img width="20" src="./src/assets/Images/MKImages/版本更新.png" style="vertical-align: middle;" alt="版本更新内容"> 版本更新内容
 
 #### v1.2.1 (2025-05-10)
 
