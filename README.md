@@ -23,7 +23,7 @@
 
 ### <img width="20" src="./src/assets/Images/MKImages/项目介绍.png" style="vertical-align: middle;" alt="项目介绍"> 项目介绍
 
-本项目为 Tauri2.0 模版项目，拉取后直接可以编写，无需额外的配置。
+本项目为 Tauri2.0 模版项目，拉取后直接可以编写，无需额外的配置，项目采用了规范的目录结构，方便开发者快速上手和协作开发。
 
 ### <img width="19" src="./src/assets/Images/MKImages/添加功能.png" style="vertical-align: middle;" alt="模版已添加功能"> 模版已添加功能
 
