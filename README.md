@@ -89,30 +89,19 @@ Tauri-Template
 │   └── update                 # 更新功能代码
 ├── src                        # 前端源代码
 │   ├── components             # 全局组件
-│       └── update.vue         # 更新组件
 │   ├── hooks                  # 组合式函数  
-│       └── useTauri.ts        # 获取 Tauri 信息
 │   ├── pages                  # 主包页面
-│       └── index.vue          # 首页
 │   ├── router                 # 路由
-│       └──index.ts            # 路由配置
 │   ├── services               # 所有请求
-│       └── index.ts           # 请求示例
 │   ├── assets                 # 本地静态资源
-│       └── images             # 图片
 │   ├── stores                 # 全局 pinia
-│       ├── modules            # pinia 仓库
-│       └── index.ts           # 全局 pinia 配置
 │   ├── types                  # 类型声明文件
-│       └── index.d.ts         # 全局组件类型声明
 │   ├── utils                  # 全局方法
-│       └── http.ts            # axios 拦截器
 │   ├── App.vue                # 入口页面
 │   └── main.ts                # Vue初始化入口文件
 ├── src-tauri                  # Rust 后端源代码
 │   ├── icons                  # 应用图标
 │   ├── src                    # Rust 源文件目录
-│       └── main.rs            #  Rust 程序的入口
 │   ├── tauri.conf.json        # Tauri 项目的核心配置
 │   └── Cargo.toml             # Rust 项目的依赖
 ├── .gitignore                 # git 忽略文件
