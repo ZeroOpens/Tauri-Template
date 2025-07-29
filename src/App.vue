@@ -6,12 +6,11 @@
   defineOptions({name: 'App'})
   import Index from '@/pages/index.vue'
 
-  // 禁用鼠标右键
-  // window.addEventListener('contextmenu', (e) => {
-  //   e.preventDefault();
-  // });
-
-
+  
+  // 禁用鼠标右键和F12键
+  // window.addEventListener('contextmenu', e => e.preventDefault());
+  // window.addEventListener('keydown', e => e.key === 'F12' && e.preventDefault());
+  
 </script>
 
 <style scoped>

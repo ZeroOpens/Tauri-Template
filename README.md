@@ -23,12 +23,22 @@
 
 ### <img width="20" src="./src/assets/Images/MKImages/项目介绍.png" style="vertical-align: middle;" alt="项目介绍"> 项目介绍
 
-本项目为 Tauri2.0 模版项目，拉取后直接可以编写，无需额外的配置，项目采用了规范的目录结构，方便开发者快速上手和协作开发。
+本项目为 Tauri2.0 模版项目，拉取后直接可以编写，减少了配置的步骤，项目采用了规范的目录结构，方便开发者快速上手和协作开发。
+
+### <img width="21" src="./src/assets/Images/MKImages/图片.png" style="vertical-align: middle;" alt="软件截图"> 软件截图
+
+<div style="display: flex; flex-wrap: wrap;">
+    <img width="45%" style="margin: 10px;" src="./src/assets/Images/MKImages/首页.png" alt="软件截图">
+    <img width="45%" style="margin: 10px;" src="./src/assets/Images/MKImages/页面1.png" alt="软件截图">
+    <img width="45%" style="margin: 10px;" src="./src/assets/Images/MKImages/页面2.png" alt="软件截图">
+    <img width="45%" style="margin: 10px;" src="./src/assets/Images/MKImages/页面3.png" alt="软件截图">
+    <img width="45%" style="margin: 10px;" src="./src/assets/Images/MKImages/页面4.png" alt="软件截图">
+</div>
 
 ### <img width="19" src="./src/assets/Images/MKImages/添加功能.png" style="vertical-align: middle;" alt="模版已添加功能"> 模版已添加功能
 
-1、添加axios，已配置拦截器<br>
-2、添加router，已配置示例<br>
+1、添加 axios 网络请求功能<br>
+2、配置 router 路由导航<br>
 3、添加pinia，已配置持久化<br>
 4、添加更新插件，修改私钥和请求地址即可<br>
 
@@ -37,6 +47,8 @@
 1. <img width="50" src="./src/assets/Images/MKImages/Vue - Official.png" alt="Vue - Official"> Vue - Official
 
 2. <img width="50" src="./src/assets/Images/MKImages/logo.png" alt="Tauri"> Tauri
+
+3. <img width="50" src="./src/assets/Images/MKImages/rust-analyzer.png" alt="rust-analyzer"> rust-analyzer
 
 
 ### <img width="20" src="./src/assets/Images/MKImages/使用教程.png" style="vertical-align: middle;" alt="使用教程"> 使用教程
@@ -73,14 +85,6 @@ pnpm tauri dev
 pnpm tauri build
 ```
 
-### <img width="20" src="./src/assets/Images/MKImages/QQ.png" style="vertical-align: middle;" alt="QQ交流群"> QQ 交流群
-
-QQ 群号：863411527
-<br>
-扫码添加:
-<br>
-<img width="150" src="./src/assets/Images/MKImages/QQ交流群.png" alt="QQ">
-
 ### <img width="20" src="./src/assets/Images/MKImages/工程结构解析.png" style="vertical-align: middle;" alt="工程主要结构解析"> 工程主要结构解析
 
 ```
@@ -88,13 +92,13 @@ Tauri-Template
 ├── Server                     # 服务器代码
 │   └── update                 # 更新功能代码
 ├── src                        # 前端源代码
+│   ├── assets                 # 本地静态资源
 │   ├── components             # 全局组件
 │   ├── hooks                  # 组合式函数  
 │   ├── pages                  # 主包页面
 │   ├── router                 # 路由
-│   ├── services               # 所有请求
-│   ├── assets                 # 本地静态资源
-│   ├── stores                 # 全局 pinia
+│   ├── services               # 网络请求
+│   ├── stores                 # pinia 存储
 │   ├── types                  # 类型声明文件
 │   ├── utils                  # 全局方法
 │   ├── App.vue                # 入口页面
@@ -114,25 +118,31 @@ Tauri-Template
 
 ### <img width="20" src="./src/assets/Images/MKImages/版本更新.png" style="vertical-align: middle;" alt="版本更新内容"> 版本更新内容
 
-#### v1.2.1 (2025-05-10)
+#### v1.3.0.20250730
+
+1.  tauri 版本升级。
+2.  优化风格与布局。
+3.  添加更多示例。
+
+#### v1.2.1.20250510
 
 1.  添加router。
 2.  添加pinia、持久化插件。
 3.  添加更多的思路。
 4.  添加更多示例。
 
-#### v1.1.1 (2025-05-06)
+#### v1.1.1.20250506
 
 1.  添加axios和拦截器。
 2.  添加跨域问题解决方法。
 3.  添加更多示例。
 
-#### v1.1.0 (2025-05-06)
+#### v1.1.0.20250506
 
 1.  添加更多示例。
 2.  修改、删除多余文件。
 3.  配置 @ 指定前端src为顶级文件。
 
-#### v1.0.0 (2025-05-05)
+#### v1.0.0.20250505
 
 1.  新版本发布。
