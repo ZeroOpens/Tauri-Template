@@ -17,10 +17,10 @@
       
       <!-- 内容页面 -->
       <div class="content" v-else>
-            <!-- 头部 -->
+        <!-- 头部 -->
         <div class="app-header">
           <div class="header-content">
-            <img src="/tauri.svg" alt="Tauri Logo" class="logo" />
+            <img src="@/assets/Images/logo.png" alt="Tauri Logo" class="logo" />
             <h1>tauri-app</h1>
           </div>
         </div>
@@ -34,10 +34,10 @@
         <div class="index-nav">
           <RouterLink :to="{name: 'home'}" class="navLink" active-class="navLink-active">信息</RouterLink>
           <RouterLink :to="{name: 'pinia'}" class="navLink" active-class="navLink-active">pinia</RouterLink>
-          <RouterLink :to="{name: 'request'}" class="navLink" active-class="navLink-active">请求</RouterLink>
-          <RouterLink :to="{name: 'function'}" class="navLink" active-class="navLink-active">功能</RouterLink>
+          <RouterLink :to="{name: 'request'}" class="navLink" active-class="navLink-active">api请求</RouterLink>
+          <RouterLink :to="{name: 'more'}" class="navLink" active-class="navLink-active">更多</RouterLink>
         </div>
-        
+
         <!-- 展示区 -->
         <div class="index-content">
           <RouterView v-slot="{ Component }">
@@ -68,14 +68,15 @@
   .hello {
     display: flex;
     justify-content: center;
+    position: relative;
     
     .welcome-card {
       border-radius: 20px;
-      padding: 50px;
+      padding: 90px 50px;
       text-align: center;
       max-width: 80%;
       width: 100%;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      box-shadow:6px -6px 8px 0 #FFD700, -6px  6px 8px 0 #24C8DB;
       border: 5px solid rgba(255, 255, 255, 0.8);
       
       
@@ -157,11 +158,10 @@
           width: 60px;
           height: 60px;
           margin-right: 10px;
-          filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
           transition: transform 0.3s ease;
           
           &:hover {
-            transform: rotate(10deg) scale(1.1);
+            transform: rotate(10deg) scale(1.2);
           }
         }
         
@@ -174,38 +174,34 @@
           -webkit-background-clip: text;
           background-clip: text;
           -webkit-text-fill-color: transparent;
-          text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
       }
     }
 
     // 返回按钮样式
     .back-button {
+      position: absolute;
       display: flex;
       align-items: center;
       align-self: flex-start;
       padding: 10px 20px;
-      margin-top:  -8%;
       border-radius: 30px;
       background: white;
       color: #24292e;
       border: none;
       cursor: pointer;
       font-size: 1rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
       transition: all 0.3s ease;
       
       .back-icon {
-        margin-right: 8px;
+        margin-right: 5px;
         transition: transform 0.3s ease;
       }
       
       &:hover {
-        background: #f6f8fa;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-        
         .back-icon {
-          transform: translateX(-3px);
+          transform: translateX(-10px);
         }
       }
     }
@@ -216,8 +212,10 @@
     display: flex;
     justify-content: center;
     gap: 50px;
-    margin: 7% 0 5px 0;
+    margin: 3% 0 5px 0;
     flex-wrap: wrap;
+    padding-bottom: 3px;
+    border-bottom: 3px dashed  #24C8DB;
     
     .navLink {
       text-decoration: none;
@@ -249,13 +247,7 @@
   
   // 内容区域样式
   .index-content {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    flex: 1;
+    padding: 20px 30px 30px;
   }
   
   // 过渡动画
