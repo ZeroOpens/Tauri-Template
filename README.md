@@ -38,12 +38,13 @@
 
 ### ✨ 功能特性
 <table>
+<table>
   <tr>
     <td style="border:3px solid #11cfddff;">
-      <ol style="padding:0; list-style:none;">
-        <li style="padding:8px 12px; border-bottom:2px dashed rgba(17,207,221,.35);">1. 添加 axios 网络请求功能</li>
-        <li style="padding:8px 12px; border-bottom:2px dashed rgba(17,207,221,.35);">2. 配置 router 路由导航</li>
-        <li style="padding:8px 12px; border-bottom:2px dashed rgba(17,207,221,.35);">3. 添加 pinia，配置持久化</li>
+      <ol style="margin:0; padding:0; list-style-position:inside;">
+        <li style="padding:8px 12px; border-bottom:2px dashed rgba(17,207,221,.35);">添加 axios 网络请求功能</li>
+        <li style="padding:8px 12px; border-bottom:2px dashed rgba(17,207,221,.35);">配置 router 路由导航</li>
+        <li style="padding:8px 12px;">添加 pinia，配置持久化</li>
       </ol>
     </td>
   </tr>
