@@ -28,12 +28,14 @@
 
 ### 🖼️ 界面展示
 
-<div style="display: flex; flex-wrap: wrap;">
+<div style="display: flex; justify-content: center; flex-wrap: wrap;">
     <img width="45%" style="margin: 10px;" src="./src/assets/Images/MKImages/首页.png" alt="软件截图">
     <img width="45%" style="margin: 10px;" src="./src/assets/Images/MKImages/页面1.png" alt="软件截图">
     <img width="45%" style="margin: 10px;" src="./src/assets/Images/MKImages/页面2.png" alt="软件截图">
     <img width="45%" style="margin: 10px;" src="./src/assets/Images/MKImages/页面3.png" alt="软件截图">
     <img width="45%" style="margin: 10px;" src="./src/assets/Images/MKImages/页面4.png" alt="软件截图">
+    <!-- 占位 -->
+    <i style="width:45%; margin:10px; height:0;"></i>
 </div>
 
 ### ✨ 功能特性
