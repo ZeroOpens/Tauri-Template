@@ -10,4 +10,3 @@ export interface DogResponse {
 
 // 自定义类型
 // export type Dogs = DogResponse[]
-
