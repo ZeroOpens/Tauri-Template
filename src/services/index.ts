@@ -20,4 +20,4 @@ export const getWordAPI = (): Promise<string> => {
   return axiosHttp.get('/api-ziyi/anime-dailytxt/', {
     baseURL: ''  // 需设置 baseURL 为空
   });
-  };
+};

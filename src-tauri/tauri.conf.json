@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "tauri-app",
-  "version": "1.3.0",
-  "identifier": "com.tauri-app.app",
+  "productName": "tauri-template",
+  "version": "1.4.0",
+  "identifier": "com.tauri.app",
   "build": {
     "beforeDevCommand": "pnpm dev",
     "devUrl": "http://localhost:1420",
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "tauri-app",
+        "title": "tauri-template",
         "width": 800,
         "height": 600
       }
@@ -30,28 +30,6 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
-    ],
-    "windows": {
-      "wix": {
-        "language": "zh-CN"
-      },
-      "nsis": {
-        "languages": [
-          "SimpChinese",
-          "English"
-        ],
-        "displayLanguageSelector": true,
-        "installerIcon": "icons/icon.ico"
-      }
-    },
-    "createUpdaterArtifacts": true
-  },
-  "plugins": {
-    "updater": {
-      "pubkey": "myapp.key.pub",
-      "endpoints": [
-        "https://github.com/user/repo/releases/latest/download/latest.json"
-      ]
-    }
+    ]
   }
 }
