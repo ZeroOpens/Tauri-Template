@@ -134,6 +134,18 @@ Tauri-Template
     <th style="text-align:center; border:3px solid #008249ff; padding:5px 16px;">发布日期</th>
     <th style="text-align:center; border:3px solid #008249ff; padding:5px 16px;">更新内容</th>
   </tr>
+  <!-- v1.4.0 -->
+  <tr>
+    <td style="text-align:center; border:3px solid #008249ff;">v1.4.0</td>
+    <td style="text-align:center; border:3px solid #008249ff;">2025-09-20</td>
+    <td style="border:3px solid #008249ff;">
+      <ul style="margin:0 0 0 20px; padding:0;">
+        <li>Tauri 版本更新至 2.8.5</li>
+        <li>添加loading组件替换更新组件</li>
+        <li>前端页面和样式调整</li>
+      </ul>
+    </td>
+  </tr>
   <!-- v1.3.0 -->
   <tr>
     <td style="text-align:center; border:3px solid #008249ff;">v1.3.0</td>
