@@ -103,27 +103,28 @@ pnpm tauri build
 
 ```
 Tauri-Template
-├── src                        # 前端源代码
-│   ├── assets                 # 本地静态资源
+├── src                        # 前端目录
+│   ├── assets                 # 静态资源
 │   ├── components             # 全局组件
-│   ├── hooks                  # 组合式函数  
-│   ├── pages                  # 主包页面
-│   ├── router                 # 路由
+│   ├── hooks                  # 复用函数 
+│   ├── pages                  # 路由页面
+│   ├── router                 # 路由配置
 │   ├── services               # 网络请求
-│   ├── stores                 # pinia 存储
-│   ├── types                  # 类型声明文件
-│   ├── utils                  # 全局方法
-│   ├── App.vue                # 入口页面
-│   └── main.ts                # Vue初始化入口文件
-├── src-tauri                  # Rust 后端源代码
+│   ├── stores                 # 存储配置
+│   ├── types                  # 类型声明
+│   ├── utils                  # 常用工具
+│   ├── App.vue                # 根组件
+│   └── main.ts                # 入口文件
+│   └── vite-env.d.ts          # Vite 类型声明文件
+├── src-tauri                  # 后端目录
 │   ├── icons                  # 应用图标
-│   ├── src                    # Rust 源文件目录
+│   ├── src                    # Rust 源码目录
 │   ├── tauri.conf.json        # Tauri 项目的核心配置
 │   └── Cargo.toml             # Rust 项目的依赖
 ├── .gitignore                 # git 忽略文件
 ├── index.html                 # H5 端首页
 ├── LICENSE                    # 开源协议
-├── package.json               # package.json 依赖
+├── package.json               # 前端依赖
 ├── README.md                  # Markdown 说明文档
 └── vite.config.ts             # vite 配置
 ```
