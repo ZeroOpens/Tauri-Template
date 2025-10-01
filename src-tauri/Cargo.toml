@@ -23,6 +23,8 @@ tauri = { version = "2", features = [] }
 tauri-plugin-opener = "2"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+reqwest = { version = "0.12", features = ["json"] } # HTTP 库
+tokio = { version = "1", features = ["full"] } # 异步运行时库
 
 [profile.dev]
 incremental = true # 以较小的步骤编译您的二进制文件。
