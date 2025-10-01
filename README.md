@@ -112,13 +112,20 @@ Tauri-Template
 │   ├── services               # 网络请求
 │   ├── stores                 # 存储配置
 │   ├── types                  # 类型声明
-│   ├── utils                  # 常用工具
+│   ├── utils                  # 工具函数
 │   ├── App.vue                # 根组件
 │   └── main.ts                # 入口文件
 │   └── vite-env.d.ts          # Vite 类型声明文件
 ├── src-tauri                  # 后端目录
 │   ├── icons                  # 应用图标
 │   ├── src                    # Rust 源码目录
+│   │   ├── handlers           # 命令处理器
+│   │   ├── models             # 数据模型
+│   │   ├── services           # 业务逻辑
+│   │   ├── utils              # 工具函数
+│   │   ├── error.rs           # 错误处理
+│   │   └── lib.rs             # 服务层
+│   │   └── main.rs            # 程序入口
 │   ├── tauri.conf.json        # Tauri 项目的核心配置
 │   └── Cargo.toml             # Rust 项目的依赖
 ├── .gitignore                 # git 忽略文件
