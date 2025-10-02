@@ -4,7 +4,11 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/pages/Home.vue'
 import Pinia from '@/pages/Pinia.vue'
 import More from '@/pages/More.vue'
-import Request from '@/pages/Request.vue'
+import RequestIndex from '@/pages/request/index.vue'
+
+// 二级路由
+import FrontendRequest from '@/pages/request/Frontend-request.vue'
+import BackendRequest from '@/pages/request/Backend-request.vue'
 
 
 // 创建路由
@@ -14,8 +18,17 @@ const router = createRouter({
     { path: '/home', name: 'home', component: Home },
     { path: '/pinia', name: 'pinia', component: Pinia },
     { path: '/more', name: 'more', component: More },
-    { path: '/request', name: 'request', component: Request },
-    { path: '/', redirect: '/home' }  // 重定向
+    {
+      path: '/request',
+      name: 'request',
+      component: RequestIndex,
+      children: [
+        { path: 'frontend', name: 'frontend-request', component: FrontendRequest },
+        { path: 'backend', name: 'backend-request', component: BackendRequest },
+      ],
+    },
+    // { path: '/', redirect: '/home' }  // 重定向
+    { path: '/', redirect: '/request' }  // 重定向
   ]
 })
 

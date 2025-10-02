@@ -1,7 +1,9 @@
 <template>
   <div class="request">
     <div class="request-card">
-      <h2>API 请求示例</h2>
+      <h2>使用 reqwest 请求</h2>
+      <!-- 返回按钮 -->
+      <button_back @click="$router.back()" class="back-button"></button_back>
       
       <div class="button-group">
         <button 
@@ -43,49 +45,81 @@
 </template>
 
 <script setup lang="ts">
-  defineOptions({name: 'Request'})
+  defineOptions({name: 'BackendRequest'})
   import {ref} from 'vue'
-  import { getDogAPI, getWordAPI } from '@/services/index'
+  import { invoke } from '@tauri-apps/api/core';
+  import button_back from '@/components/buttons/button_back.vue'
 
-  // 状态变量
-  const dogImage = ref('')
-  const word = ref('')
-  const loadingDog = ref(false)
-  const loadingWord = ref(false)
 
-  // 随机获取狗狗图片
+    // 响应式数据
+  const dogImage = ref<string>('');
+  const loadingDog = ref<boolean>(false);
+  const error = ref<string>('');
+
+  // 获取狗狗图片的方法
   const getDogImages = async () => {
-    // 如果已经在加载中，则不执行
-    if (loadingDog.value) return
+    loadingDog.value = true;
+    error.value = '';
+    dogImage.value = '';
     
     try {
-      loadingDog.value = true
-      const response = await getDogAPI()
-      dogImage.value = response.message
-      console.log(response)
-    } catch (error) {
-      console.error('获取狗狗图片失败:', error)
+      // 调用Rust后端的get_random_dog_image命令
+      const imageUrl = await invoke<string>('get_random_dog_image');
+      dogImage.value = imageUrl;
+    } catch (err) {
+      error.value = `获取图片失败: ${err}`;
+      console.error('调用Rust命令失败:', err);
     } finally {
-      loadingDog.value = false
+      loadingDog.value = false;
     }
-  }
+  };
 
-  // 随机获取一句话
+
+  // 单条语录相关数据
+  const word = ref<string>('');
+  const loadingWord = ref<boolean>(false);
+  const singleError = ref<string>('');
+
+  // 获取单条动漫一言
   const getWord = async () => {
-    // 如果已经在加载中，则不执行
-    if (loadingWord.value) return
+    loadingWord.value = true;
+    singleError.value = '';
+    word.value = '';
     
     try {
-      loadingWord.value = true
-      const response = await getWordAPI()
-      word.value = response
-      console.log(response)
-    } catch (error) {
-      console.error('获取语句失败:', error)
+      // 调用Rust后端的get_random_anime_quote命令
+      const response = await invoke<{ quote: string }>('get_random_anime_quote');
+      word.value = response.quote;
+    } catch (err) {
+      singleError.value = `获取动漫一言失败: ${err}`;
+      console.error('调用Rust命令失败:', err);
     } finally {
-      loadingWord.value = false
+      loadingWord.value = false;
     }
-  }
+  };
+
+  // 多条语录相关数据
+  // const animeQuotes = ref<Array<{ quote: string }>>([]);
+  // const loadingMultiple = ref<boolean>(false);
+  // const multipleError = ref<string>('');
+  
+  // // 获取多条动漫一言
+  // const getWords = async (count: number) => {
+  //   loadingMultiple.value = true;
+  //   multipleError.value = '';
+  //   animeQuotes.value = [];
+    
+  //   try {
+  //     // 调用Rust后端的get_multiple_anime_quotes命令
+  //     const quotes = await invoke<Array<{ quote: string }>>('get_multiple_anime_quotes', { count });
+  //     animeQuotes.value = quotes;
+  //   } catch (err) {
+  //     multipleError.value = `获取多条动漫一言失败: ${err}`;
+  //     console.error('调用Rust命令失败:', err);
+  //   } finally {
+  //     loadingMultiple.value = false;
+  //   }
+  // };
 </script>
 
 <style scoped lang="scss">
@@ -93,8 +127,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   
   .request-card {
+    position: relative;
     background: white;
     border-radius: 16px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
@@ -115,10 +151,22 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 10%;
+        width: 15%;
         height: 3px;
-        background: linear-gradient(90deg, #4CAF50, #8BC34A);
+        background: #F44B01;
         border-radius: 3px;
+      }
+    }
+
+    // 返回按钮
+    .back-button {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      border-radius: 16px 0 80% 0;
+      
+      &:hover {
+        border-radius: 16px 0;
       }
     }
   }
@@ -172,6 +220,7 @@
     box-shadow: 0 4px 10px rgba(33, 150, 243, 0.3);
   }
   
+  // 加载动画
   .loading-spinner {
     width: 16px;
     height: 16px;

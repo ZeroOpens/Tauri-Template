@@ -34,7 +34,7 @@
         <div class="index-nav">
           <RouterLink :to="{name: 'home'}" class="navLink" active-class="navLink-active">信息</RouterLink>
           <RouterLink :to="{name: 'pinia'}" class="navLink" active-class="navLink-active">pinia</RouterLink>
-          <RouterLink :to="{name: 'request'}" class="navLink" active-class="navLink-active">api请求</RouterLink>
+          <RouterLink :to="{name: 'request'}" class="navLink" active-class="navLink-active">API请求</RouterLink>
           <RouterLink :to="{name: 'more'}" class="navLink" active-class="navLink-active">更多</RouterLink>
         </div>
 
