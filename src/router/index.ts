@@ -27,8 +27,7 @@ const router = createRouter({
         { path: 'backend', name: 'backend-request', component: BackendRequest },
       ],
     },
-    // { path: '/', redirect: '/home' }  // 重定向
-    { path: '/', redirect: '/request' }  // 重定向
+    { path: '/', redirect: '/home' }  // 重定向
   ]
 })
 

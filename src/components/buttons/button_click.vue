@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
   defineOptions({name: 'button_click'})
-  import { defineProps, withDefaults, computed } from 'vue'
+  import { computed } from 'vue'
 
   // 定义props类型
   interface Props {

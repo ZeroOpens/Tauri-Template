@@ -144,6 +144,17 @@ Tauri-Template
     <th style="text-align:center; border:3px solid #008249ff; padding:5px 16px;">发布日期</th>
     <th style="text-align:center; border:3px solid #008249ff; padding:5px 16px;">更新内容</th>
   </tr>
+  <!-- v1.5.0 -->
+  <tr>
+    <td style="text-align:center; border:3px solid #008249ff;">v1.5.0</td>
+    <td style="text-align:center; border:3px solid #008249ff;">2025-10-02</td>
+    <td style="border:3px solid #008249ff;">
+      <ul style="margin:0 0 0 20px; padding:0;">
+        <li>添加后端api请求示例代码</li>
+        <li>添加请求后端api示例页面</li>
+      </ul>
+    </td>
+  </tr>
   <!-- v1.4.0 -->
   <tr>
     <td style="text-align:center; border:3px solid #008249ff;">v1.4.0</td>
